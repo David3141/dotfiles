@@ -4,3 +4,7 @@
 
 vim.keymap.set("n", "gh", "^", { desc = "Go to first char in line" })
 vim.keymap.set("n", "gl", "$", { desc = "Go to last char in line" })
+
+-- Move selected lines up/down in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
