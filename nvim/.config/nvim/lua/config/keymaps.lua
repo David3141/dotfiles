@@ -8,3 +8,7 @@ vim.keymap.set("n", "gl", "$", { desc = "Go to last char in line" })
 -- Move selected lines up/down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Move current line up/down in normal mode
+vim.keymap.set("n", "<leader>j", ":m .+1<CR>==")
+vim.keymap.set("n", "<leader>k", ":m .-2<CR>==")
