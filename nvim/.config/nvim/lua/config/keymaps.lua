@@ -12,3 +12,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Move current line up/down in normal mode
 vim.keymap.set("n", "<leader>j", ":m .+1<CR>==")
 vim.keymap.set("n", "<leader>k", ":m .-2<CR>==")
+
+-- Use black hole register for x and X by default
+vim.keymap.set("n", "x", '"_x', { noremap = true, silent = true })
+vim.keymap.set("n", "X", '"_X', { noremap = true, silent = true })
+vim.keymap.set("v", "x", '"_x', { noremap = true, silent = true })

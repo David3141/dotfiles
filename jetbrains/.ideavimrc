@@ -760,3 +760,12 @@ vnoremap > >gv
 vnoremap < <gv
 
 " There are several more Neovim mappings that need to be ported.
+
+" ========================================
+" My own custom config
+" ========================================
+
+" Use black hole register for x / X by default
+nnoremap x "_x
+nnoremap X "_X
+xnoremap x "_x
