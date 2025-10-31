@@ -783,3 +783,5 @@ nnoremap <leader>k :m .-2<CR>==
 nnoremap x "_x
 nnoremap X "_X
 xnoremap x "_x
+
+set mini-ai
