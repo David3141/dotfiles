@@ -5,7 +5,7 @@ An example that enables everything:
 
 ```
 # First, install stow, e.g., brew install stow
-git clone git@github.com:David3141/dotfiles.git ~/dotfiles
+git clone https://github.com/David3141/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow ghostty
 stow jetbrains
