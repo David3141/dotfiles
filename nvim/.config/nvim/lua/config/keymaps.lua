@@ -17,3 +17,7 @@ vim.keymap.set("n", "<leader>k", ":m .-2<CR>==")
 vim.keymap.set("n", "x", '"_x', { noremap = true, silent = true })
 vim.keymap.set("n", "X", '"_X', { noremap = true, silent = true })
 vim.keymap.set("v", "x", '"_x', { noremap = true, silent = true })
+
+-- Change current word in a repeatable manner
+vim.keymap.set("n", "<leader>cn", "*``cgn", { noremap = true, silent = true, desc = "Change next occurence" })
+vim.keymap.set("n", "<leader>cN", "*``cgN", { noremap = true, silent = true, desc = "Change previous occurence" })

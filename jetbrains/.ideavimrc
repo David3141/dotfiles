@@ -784,4 +784,8 @@ nnoremap x "_x
 nnoremap X "_X
 xnoremap x "_x
 
+" Change current word in a repeatable manner
+nnoremap <Leader>cn *``cgn
+nnoremap <Leader>cN *``cgN
+
 set mini-ai
