@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Catppuccin Mocha",
   "seed_search_query_from_cursor": "selection",
   "vertical_scroll_margin": 12.0,
   "active_pane_modifiers": {
@@ -69,7 +70,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Kanagawa Wave"
+    "dark": "Catppuccin Mocha"
   },
   "ui_font_size": 16,
   "vim": {
