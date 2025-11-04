@@ -48,22 +48,15 @@
     }
   },
   {
+    "context": "Editor",
+    "bindings": {
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp"
+    }
+  },
+  {
     "context": "ProjectPanel",
     "bindings": { "space e": "workspace::CloseActiveDock" }
-  },
-  {
-    "context": "vim_mode == normal && Editor",
-    "bindings": {
-      "space j": "editor::MoveLineDown",
-      "space k": "editor::MoveLineUp"
-    }
-  },
-  {
-    "context": "vim_mode == visual && Editor",
-    "bindings": {
-      "J": "editor::MoveLineDown",
-      "K": "editor::MoveLineUp"
-    }
   },
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",

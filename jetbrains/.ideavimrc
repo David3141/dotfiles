@@ -771,14 +771,6 @@ nnoremap gh ^
 " Go to end of line (like $)
 nnoremap gl $
 
-" --- Visual mode: move selected lines up/down ---
-xnoremap J :m '>+1<CR>gv=gv
-xnoremap K :m '<-2<CR>gv=gv
-
-" --- Normal mode: move current line up/down ---
-nnoremap <leader>j :m .+1<CR>==
-nnoremap <leader>k :m .-2<CR>==
-
 " Use black hole register for x / X by default
 nnoremap x "_x
 nnoremap X "_X
