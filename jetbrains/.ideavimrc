@@ -1,4 +1,6 @@
 " Copied from https://github.com/cufarvid/lazy-idea
+" With small changes:
+" - Swapped <leader>ca and <leader>cA
 
 " LazyVim key mappings for Jetbrains IDEs.
 
@@ -394,9 +396,9 @@ nmap gK <Action>(ParameterInfo)
 let g:WhichKeyDesc_signature_help_alt = "<C-k> Signature Help"
 imap <C-k> <C-o><Action>(ParameterInfo)
 
-let g:WhichKeyDesc_code_action = "<leader>ca Code Action"
-nmap <leader>ca <Action>(RefactoringMenu)
-vmap <leader>ca <Action>(RefactoringMenu)
+let g:WhichKeyDesc_code_action = "<leader>cA Code Action"
+nmap <leader>cA <Action>(RefactoringMenu)
+vmap <leader>cA <Action>(RefactoringMenu)
 
 let g:WhichKeyDesc_code_lens = "<leader>cc Run Codelens"
 nmap <leader>cc :echo 'There is no equivalent mapping for Run Codelens.'<cr>
@@ -411,8 +413,8 @@ if is_ide_rider | nmap <leader>cR <Action>(RiderRenameFile) | endif
 let g:WhichKeyDesc_rename = "<leader>cr Rename"
 nmap <leader>cr <Action>(RenameElement)
 
-let g:WhichKeyDesc_source_action = "<leader>cA Source Action"
-nmap <leader>cA <Action>(ShowIntentionActions)
+let g:WhichKeyDesc_source_action = "<leader>ca Source Action"
+nmap <leader>ca <Action>(ShowIntentionActions)
 
 let g:WhichKeyDesc_reference_next = "]] Next Reference"
 nmap ]] <Action>(GotoNextElementUnderCaretUsage)
