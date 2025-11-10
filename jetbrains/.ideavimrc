@@ -760,9 +760,11 @@ vnoremap < <gv
 
 " Go to first non-blank character in line (like ^)
 nnoremap gh ^
+xnoremap gh ^
 
 " Go to end of line (like $)
 nnoremap gl $
+xnoremap gl $
 
 " Use black hole register for x / X by default
 nnoremap x "_x
@@ -802,3 +804,4 @@ xmap S <Action>(flash.treesitter)
 omap r <Action>(flash.remote)
 
 set mini-ai
+Plug 'machakann/vim-highlightedyank'
