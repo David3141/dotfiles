@@ -1,4 +1,5 @@
 font-family = CommitMono Nerd Font
 macos-option-as-alt = left
 theme = Catppuccin Mocha
+adjust-cell-height = 30%
 
