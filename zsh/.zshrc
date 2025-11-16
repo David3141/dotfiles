@@ -1,3 +1,4 @@
+alias vim=nvim
 alias ls='ls -al --color'
 
 alias g='git'
