@@ -2,6 +2,8 @@
 " With small changes:
 " - Swapped <leader>ca and <leader>cA
 " - Deleted easymotion (replaced by flash at the bottom)
+" - Changed gr (show references) to the modal version
+" - Changed <leader>tt so that it runs all tests of current file
 
 " LazyVim key mappings for Jetbrains IDEs.
 
@@ -370,7 +372,7 @@ nmap gd <Action>(GotoDeclaration)
 
 " Code Navigation
 let g:WhichKeyDesc_references = "gr References"
-nmap gr <Action>(FindUsages)
+nmap gr <Action>(ShowUsages)
 
 let g:WhichKeyDesc_goto_implementation = "gI Goto Implementation"
 nmap gI <Action>(GotoImplementation)
@@ -445,7 +447,7 @@ let g:WhichKeyDesc_buffer_explorer = "<leader>be Buffer Explorer"
 nmap <leader>be <Action>(ActivateProjectToolWindow)
 
 let g:WhichKeyDesc_explorer = "<leader>e Explorer NeoTree (Root Dir)"
-nmap <leader>e <Action>(FileStructurePopup)
+nmap <leader>e <Action>(ActivateProjectToolWindow)
 
 let g:WhichKeyDesc_explorer_cwd = "<leader>E Explorer NeoTree (cwd)"
 nmap <leader>E <Action>(SelectInProjectView)
@@ -572,7 +574,7 @@ let g:WhichKeyDesc_search_resume = "<leader>sR Resume"
 nmap <leader>sR :echo 'Not yet implmented.'<cr>
 
 let g:WhichKeyDesc_search_symbol = "<leader>ss Goto Symbol"
-nmap <leader>ss <Action>(GotoSymbol)
+nmap <leader>ss <Action>(FileStructurePopup)
 
 let g:WhichKeyDesc_search_symbol_workspace = "<leader>sS Goto Symbol (Workspace)"
 nmap <leader>sS <Action>(GotoSymbol)
@@ -707,7 +709,7 @@ let g:WhichKeyDesc_test_stop = "<leader>tS Stop (Neotest)"
 nmap <leader>tS <Action>(Stop)
 
 let g:WhichKeyDesc_test_file = "<leader>tt Run File (Neotest)"
-nmap <leader>tt <Action>(RunClass)
+nmap <leader>tt gg<Action>(RunClass)<C-o>
 if is_ide_rider | nmap <leader>tt <Action>(RiderUnitTestRunContextAction) | endif
 
 let g:WhichKeyDesc_test_all = "<leader>tT Run All Test Files (Neotest)"
@@ -757,6 +759,20 @@ vnoremap < <gv
 " ========================================
 " My own custom config
 " ========================================
+sethandler <C-s> a:ide
+:set ignorecase smartcase
+
+nmap <leader>co <Action>(OptimizeImports)
+nmap <leader>ss <Action>(FileStructurePopup)
+nmap <leader>xx <Action>(ActivateProblemsViewToolWindow)
+
+" Harpooner
+nmap <leader>h <Action>(HarpoonerToggleMenu)
+nmap <leader>H <Action>(HarpoonerToggleFile)
+nmap <leader>1 <Action>(HarpoonerOpenFile0)
+nmap <leader>2 <Action>(HarpoonerOpenFile1)
+nmap <leader>3 <Action>(HarpoonerOpenFile2)
+nmap <leader>4 <Action>(HarpoonerOpenFile3)
 
 " Go to first non-blank character in line (like ^)
 nnoremap gh ^
@@ -774,6 +790,9 @@ xnoremap x "_x
 " Change current word in a repeatable manner
 nnoremap <Leader>cn *``cgn
 nnoremap <Leader>cN *``cgN
+
+nmap ]h <Action>(VcsShowNextChangeMarker)
+nmap [h <Action>(VcsShowPrevChangeMarker)
 
 " Flash plugin
 " Search for string in visible area and jump
@@ -805,3 +824,10 @@ omap r <Action>(flash.remote)
 
 set mini-ai
 Plug 'machakann/vim-highlightedyank'
+
+" Setting this manually avoids the error blip sound
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
+set hls
+set incsearch

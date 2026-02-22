@@ -1,5 +1,6 @@
 font-family = CommitMono Nerd Font
+font-size = 13
 macos-option-as-alt = left
-theme = Catppuccin Mocha
-adjust-cell-height = 30%
+theme = Monokai Pro Octagon
+adjust-cell-height = 55%
 
