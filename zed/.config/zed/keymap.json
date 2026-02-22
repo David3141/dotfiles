@@ -9,22 +9,22 @@
   {
     "context": "EmptyPane || Editor || Terminal",
     "bindings": {
-      "ctrl-/": "terminal_panel::ToggleFocus"
-    }
+      "ctrl-/": "terminal_panel::ToggleFocus",
+    },
   },
   {
     "bindings": {
       // "cmd-e": "file_finder::Toggle",
       // "space b b": "vim::GoToPreviousTab"
-    }
+    },
   },
   {
     "context": "EmptyPane || ProjectPanel || (VimControl && !menu)",
     "bindings": {
       "space f f": "file_finder::Toggle",
       "space s g": "pane::DeploySearch",
-      "space s r": ["pane::DeploySearch", { "replace_enabled": true }]
-    }
+      "space s r": ["pane::DeploySearch", { "replace_enabled": true }],
+    },
   },
   {
     "context": "VimControl && !menu",
@@ -44,25 +44,25 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
       "space w d": "pane::CloseAllItems",
-      "space e": "project_panel::ToggleFocus"
-    }
+      "space e": "project_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
       "alt-j": "editor::MoveLineDown",
-      "alt-k": "editor::MoveLineUp"
-    }
+      "alt-k": "editor::MoveLineUp",
+    },
   },
   {
     "context": "ProjectPanel",
-    "bindings": { "space e": "workspace::CloseActiveDock" }
+    "bindings": { "space e": "workspace::CloseActiveDock" },
   },
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
       "Q": "vim::MiniQuotes",
-      "B": "vim::MiniBrackets"
-    }
-  }
+      "B": "vim::MiniBrackets",
+    },
+  },
 ]
