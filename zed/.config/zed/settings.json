@@ -4,79 +4,70 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
 {
-  "when_closing_with_no_tabs": "keep_window_open",
-  "icon_theme": "Catppuccin Mocha",
-  "seed_search_query_from_cursor": "selection",
-  "vertical_scroll_margin": 12.0,
-  "active_pane_modifiers": {
-    "border_size": 0.0,
-    "inactive_opacity": 1.0
+  "show_whitespaces": "all",
+  "sticky_scroll": {
+    "enabled": true
   },
-  "use_system_window_tabs": false,
+  "edit_predictions": {
+    "provider": "none"
+  },
+  "buffer_font_family": ".ZedMono",
+  "vim_mode": true,
+  "autosave": "on_focus_change",
+  "buffer_font_size": 13,
+  "base_keymap": "JetBrains",
+  "disable_ai": false,
+  "excerpt_context_lines": 3,
+  "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"]
+    }
+  },
+  "lsp": {
+    "ruby-lsp": {}
+  },
+  "minimap": {
+    "show": "always",
+    "thumb": "always",
+    "current_line_highlight": null
+  },
   "preview_tabs": {
     "enabled": false
   },
+  "show_wrap_guides": true,
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show": true
   },
-  "tabs": {
-    "show_diagnostics": "errors",
-    "close_position": "left",
-    "file_icons": false,
-    "git_status": true
-  },
-  "title_bar": {
-    "show_menus": false,
-    "show_sign_in": false,
-    "show_user_picture": false,
-    "show_project_items": true,
-    "show_onboarding_banner": true,
-    "show_branch_icon": true
-  },
-  "status_bar": {
-    "active_language_button": true
-  },
-  "project_panel": {
-    "hide_root": true,
-    "indent_guides": {
-      "show": "never"
-    },
-    "auto_fold_dirs": false,
-    "indent_size": 20.0,
-    "folder_icons": true,
-    "file_icons": true,
-    "entry_spacing": "standard",
-    "button": true
-  },
-  "use_smartcase_search": true,
-  "base_keymap": "JetBrains",
-  "buffer_font_size": 15,
-  "disable_ai": true,
-  "buffer_font_family": "CommitMono Nerd Font Mono",
-  "minimap": {
-    "show": "always"
-  },
-  "tab_size": 2,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
-  "terminal": {
-    "button": true,
-    "dock": "right"
-  },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Catppuccin Mocha"
-  },
+  // "terminal": {
+  //   "dock": "right"
+  // },
+  "theme": "Zedokai (Filter Octagon)",
   "ui_font_size": 16,
   "vim": {
     "use_smartcase_find": true,
     "toggle_relative_line_numbers": true
   },
-  "vim_mode": true
+  "wrap_guides": [80, 100]
 }
