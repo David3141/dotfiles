@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "when_closing_with_no_tabs": "keep_window_open",
   "icon_theme": "Catppuccin Mocha",
   "seed_search_query_from_cursor": "selection",
   "vertical_scroll_margin": 12.0,
