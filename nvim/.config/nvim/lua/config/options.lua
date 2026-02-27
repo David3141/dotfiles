@@ -4,3 +4,6 @@
 local opt = vim.opt
 
 opt.scrolloff = 10
+
+-- Acoid conflicts between Biome and Prettier
+vim.g.lazyvim_prettier_needs_config = true

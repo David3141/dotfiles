@@ -3,4 +3,5 @@ font-size = 13
 macos-option-as-alt = left
 theme = Monokai Pro Octagon
 adjust-cell-height = 55%
+scrollback-limit = 10000000
 

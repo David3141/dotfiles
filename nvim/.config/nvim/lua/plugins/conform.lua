@@ -6,6 +6,14 @@ return {
       eruby = { "erb_format" },
     },
     formatters = {
+      biome = {
+        args = {
+          "check",
+          "--write",
+          "--stdin-file-path",
+          "$FILENAME",
+        },
+      },
       rubocop = function()
         return {
           command = "bundle",
