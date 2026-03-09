@@ -260,29 +260,18 @@
 		}
 	},
 
+	// TS / JS
 	{
-  "bindings": {
-   "space t r": [
-    "editor::SpawnNearestTask",
-    {
-     "reveal": "no_focus"
-    }
-   ]
-  }
- },
-
- // TS/JS
- {
-  	"context": "Editor && vim_mode == normal && (extension == ts || extension == tsx || extension == js || extension == jsx)",
-  	"bindings": {
-  		"space t t": [
-  			"task::Spawn",
-  			{
-  				"task_name": "TS tests: current file"
-  			}
-  		],
-  	}
-  },
+		"context": "Editor && vim_mode == normal && (extension == ts || extension == tsx || extension == js || extension == jsx)",
+		"bindings": {
+			"space t t": [
+				"task::Spawn",
+				{
+					"task_name": "TS tests: current file (Docker)"
+				}
+			]
+		}
+	},
 
 	// Ruby
 	{
@@ -294,6 +283,17 @@
 					"task_name": "RSpec: current file (Docker)"
 				}
 			]
-  	}
+		}
+	},
+	{
+		"context": "Editor && vim_mode == normal && extension == rb",
+		"bindings": {
+			"space t r": [
+				"editor::SpawnNearestTask",
+				{
+					"reveal": "no_focus"
+				}
+			]
+		}
 	}
 ]
