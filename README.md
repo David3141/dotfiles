@@ -11,11 +11,10 @@ stow ghostty
 stow jetbrains
 stow karabiner
 stow nvim
-stow zed
+stow zed # Zed sometimes doesn't like symlinks. Try copying the files instead.
 stow zsh
 ```
 
 Stow automatically targets the parent directory of where you run it from.
 So this only works if you clone the `dotfiles` folder into `$HOME` (like above).
 If you want to store them somewhere else, use `stow` with a `--target` option.
-
