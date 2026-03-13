@@ -1,4 +1,6 @@
 {
+	"buffer_font_family": "JetBrainsMono Nerd Font",
+	"snippet_sort_order": "top",
 	"show_whitespaces": "all",
 	"sticky_scroll": {
 		"enabled": true
@@ -9,13 +11,15 @@
 	"buffer_font_features": {
 		"calt": false
 	},
-	"buffer_font_size": 13,
-	"buffer_line_height": {
-		"custom": 2
-	},
+	"buffer_font_size": 13.0,
+	"buffer_line_height": "comfortable",
+	// "buffer_line_height": {
+	// 	"custom": 2
+	// },
 	"base_keymap": "JetBrains",
 	"disable_ai": false,
 	"excerpt_context_lines": 3,
+	"icon_theme": "Catppuccin Mocha",
 	"languages": {
 		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
 		"HTML": { "formatter": { "language_server": { "name": "biome" } } },
@@ -23,6 +27,12 @@
 		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
 		"JavaScript": {
 			"formatter": { "language_server": { "name": "biome" } },
+			"language_servers": [
+				"!eslint",
+				"!typescript-language-server",
+				"vtsls",
+				"..."
+			],
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
 				"source.organizeImports.biome": true
@@ -30,6 +40,12 @@
 		},
 		"TSX": {
 			"formatter": { "language_server": { "name": "biome" } },
+			"language_servers": [
+				"!eslint",
+				"!typescript-language-server",
+				"vtsls",
+				"..."
+			],
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
 				"source.organizeImports.biome": true
@@ -37,6 +53,12 @@
 		},
 		"TypeScript": {
 			"formatter": { "language_server": { "name": "biome" } },
+			"language_servers": [
+				"!eslint",
+				"!typescript-language-server",
+				"vtsls",
+				"..."
+			],
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
 				"source.organizeImports.biome": true
@@ -69,17 +91,18 @@
 	},
 	"show_wrap_guides": true,
 	"tab_bar": {
-		"show": true
+		"show": false
 	},
 	"telemetry": {
 		"diagnostics": false,
 		"metrics": false
 	},
-	// "terminal": {
-	//   "dock": "right"
-	// },
-	"theme": "Zedokai (Filter Octagon)",
+	"terminal": {
+		"dock": "right"
+	},
+	"theme": "Zedokai Darker (Filter Octagon)",
 	"ui_font_size": 16,
+	"use_on_type_format": false,
 	"vim": {
 		"use_smartcase_find": true,
 		"toggle_relative_line_numbers": true
