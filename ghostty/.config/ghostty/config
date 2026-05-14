@@ -5,3 +5,6 @@ theme = Monokai Pro Octagon
 adjust-cell-height = 55%
 scrollback-limit = 10000000
 
+# Fix SSH shell behavior
+shell-integration-features = true
+
