@@ -25,4 +25,7 @@ function install_nvim_tarball() {
   echo "INSTALLED nvim"
 }
 
+sudo apt update
+sudo apt install fd-find fzf lazygit ripgrep
+
 install_nvim_tarball
