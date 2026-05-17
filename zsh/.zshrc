@@ -53,6 +53,6 @@ PROMPT=' %1~ %F{cyan}$(branch_name) %F{magenta}$(git_status)%f '
 
 
 # Tools
-source <(fzf --zsh)
-eval "$(mise activate zsh)"
-eval "$(zoxide init zsh)"
+(( $+commands[fzf] ))    && source <(fzf --zsh)
+(( $+commands[mise] ))   && eval "$(mise activate zsh)"
+(( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
