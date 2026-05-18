@@ -7,4 +7,5 @@ scrollback-limit = 10000000
 
 # Fix SSH shell behavior
 shell-integration-features = true
+clipboard-read = allow
 
